@@ -1,0 +1,52 @@
+<html>
+    <style>
+        h1 {color:navy;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size:xx-large;
+            text-align: center;}
+        h2 {color:purple;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size:x-large;
+            text-align: center;} 
+        h3 {color:rgb(240, 6, 123);
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size:large;
+            text-align: center;} 
+
+        input[type=submit]{
+            width: 10%;
+            background-color: darkgreen;
+            color: white;}
+        input[type=text]{
+            width: 20%;
+            height: 5%;
+            text-align:left;}
+
+
+    </style>
+    <h1>Tweet Sentiment Extraction</h1><br><br>
+    <body style="background-image: url('bg_image.jpg')">
+        <h2>For Prediction</h2><br>
+        <h3>For getting the extracted text</h3><br>
+        <form action='/prediction' method="post">
+        <label for="text_sent"><h3>Text:</h3></label>
+        <center><input type='text' id='text_sent' name='text_sent' size='100' required><br><br></center>
+        <label for='sentiment'><h3>Sentiment:</h3></label>
+        <center><input tpye='text' id='sentiment' name='sentiment' value='Null'><br><br></center>
+        <center><input type='submit' value='Submit'></center>
+        </form>
+        <br><br>
+        <h2>For Score</h2><br>
+        <h3>For getting the Jaccard score</h3><br>
+        <form action='/score' method="post">
+        <label for="text_sent"><h3>Text:</h3></label>
+        <center><input type='text' id='text_sent' name='text_sent' size='100' required><br><br></center>
+        <label for='sentiment'><h3>Sentiment:</h3></label>
+        <center><input tpye='text' id='sentiment' name='sentiment' value='Null'><br><br></center>
+        <label for="act_sent"><h3>Actual Selected Text:</h3></label>
+        <center><input type='text' id='act_sent' name='act_sent' size='100' required><br><br></center>
+        <center><input type='submit' value='Submit'></center>
+        </form>
+    </body>
+
+</html>
